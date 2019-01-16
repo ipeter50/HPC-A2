@@ -1,15 +1,15 @@
-SRCS	= main_jacobi.c datatools.c
+SRCS	= main.c datatools.c utils.c jacobi.c gs.c
 OBJS	= $(SRCS:.c=.o)
-TARGET	= jacobi.$(CC)
+TARGET	= poisson.$(CC)
 
 CC	= suncc
 INCS	= 
 DBG	= -g
-OPT	= -O3
-PARA	= 
+OPT	= -fast -O3
+PARA	= -xopenmp -xloopinfo
 CFLAGS	= $(DBG) $(OPT) $(PARA) $(XOPTS)
 
-LIBS	= -xopenmp -xloopinfo
+LIBS	= -lm 
 
 all: $(TARGET)
 

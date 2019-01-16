@@ -1,4 +1,4 @@
-for t in 1 2 4 8 16
+for t in 1 2 4 6 8 10 12 14 16
 do
 	for size in 2000 4000 6000 8000 10000
 	do
