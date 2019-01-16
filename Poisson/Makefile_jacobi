@@ -1,0 +1,25 @@
+SRCS	= main_jacobi.c datatools.c
+OBJS	= $(SRCS:.c=.o)
+TARGET	= jacobi.$(CC)
+
+CC	= suncc
+INCS	= 
+DBG	= -g
+OPT	= -O3
+PARA	= 
+CFLAGS	= $(DBG) $(OPT) $(PARA) $(XOPTS)
+
+LIBS	= -xopenmp -xloopinfo
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LIBS)
+
+clean:
+	@/bin/rm -f $(OBJS) *~ core*
+
+realclean: clean
+	@/bin/rm -f $(TARGET)
+
+
