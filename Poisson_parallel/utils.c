@@ -4,14 +4,15 @@
 void
 init_matrices(double **Uk, double **Uk1, double **F, int N){
 	int i, j;
+	#pragma omp parallel for shared(N, Uk, Uk1, F) private(i,j)
 	for(i=0;i<N+2;i++){
 		for(j=0;j<N+2;j++){
-			Uk[i][j] = 20;
-			Uk1[i][j] = 20;
-			F[i][j] = 20;
+			Uk[i][j] = 0;
+			Uk1[i][j] = 0;
+			F[i][j] = 0;
 		}
 	}
-
+	#pragma omp parallel for shared(N, Uk, Uk1) private(i)
 	for(i=0;i<N+2;i++){
 		Uk[i][0]=20; //left wall
 		Uk[i][N+1]=20; // right wall
@@ -27,10 +28,11 @@ init_matrices(double **Uk, double **Uk1, double **F, int N){
 	rad_end_i = round((N+2)*5/6);
 	rad_start_j = round((N+2)*3/6);
 	rad_end_j = round((N+2)*4/6);	
-
+	
+	#pragma omp parallel for shared(N, F, rad_start_i, rad_start_j, rad_end_i, rad_end_j) private(i,j)
 	for(i=rad_start_i; i< rad_end_i; i++){
 		for(j=rad_start_j; j< rad_end_j; j++){
-			F[i][j] = 200;		
+			F[i][j] = 2000;		
 		}
 	}
 }

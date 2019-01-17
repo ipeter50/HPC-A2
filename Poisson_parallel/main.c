@@ -42,9 +42,12 @@ main(int argc, char *argv[]) {
 	
 	ts = omp_get_wtime();
 	
-	printf("jacobi");		
+	printf("jacobi");
+	
+			
 	jacobi(Uk, Uk1, F, N, max_iter, threshold);
 	
+
 	te = omp_get_wtime() - ts;
 	printf("\nTime: %f\n", te);
 

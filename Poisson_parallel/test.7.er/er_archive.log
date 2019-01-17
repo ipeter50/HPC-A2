@@ -1,0 +1,12 @@
+### Start Thu Jan 17 14:58:01 2019
+# /opt/oracle/developerstudio12.6/bin/../bin/er_archive -n -O /zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/er_archive.log /zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er
+Copying `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/poisson.suncc'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/poisson.suncc_yYZY6KTSlCf'
+Copying `/usr/lib64/librt-2.17.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/librt-2.17.so_OCEC1bthLm2'
+Copying `/usr/lib64/libdl-2.17.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libdl-2.17.so_OCEC1bthLm2'
+Copying `/opt/oracle/developerstudio12.6/lib/compilers/rtlibs/usr/lib/amd64/libmtsk_crt.so.1'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libmtsk_crt.so.1_cGydg-gVPAc'
+Copying `/usr/lib64/libc-2.17.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libc-2.17.so_OCEC1bthLm2'
+Copying `/usr/lib64/libpthread-2.17.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libpthread-2.17.so_OCEC1bthLm2'
+Copying `/opt/oracle/developerstudio12.6/lib/compilers/rtlibs/usr/lib/amd64/libmtsk.so.1'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libmtsk.so.1_cGydg-gVPAc'
+Copying `/usr/lib64/libm-2.17.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libm-2.17.so_OCEC1bthLm2'
+Copying `/opt/oracle/developerstudio12.6/lib/analyzer/amd64/runtime/libcollector.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/libcollector.so_-C8vWEvanQd'
+Copying `/usr/lib64/ld-2.17.so'  to `/zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel/test.7.er/archives/ld-2.17.so_OCEC1bthLm2'
