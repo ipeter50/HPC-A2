@@ -2,7 +2,7 @@ TARGET	= mandelbrot
 OBJS	= main.o mandel.o writepng.o 
 
 OPT	= -g -fast 
-ISA	= -xinstrument=datarace
+ISA	= 
 PARA	= -xopenmp -xloopinfo
 
 PNGWRITERPATH = pngwriter

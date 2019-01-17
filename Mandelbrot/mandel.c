@@ -8,6 +8,9 @@ mandel(int disp_width, int disp_height, int *array, int max_iter) {
     scale_real = 3.5 / (double)disp_width;
     scale_imag = 3.5 / (double)disp_height;
 
+    #pragma omp parallel
+    {
+
     #pragma omp for private(i, x, j, y, u, v, u2, v2, iter) schedule(runtime)
     for(i = 0; i < disp_width; i++) {
 
@@ -39,5 +42,7 @@ mandel(int disp_width, int disp_height, int *array, int max_iter) {
 
 	    array[i*disp_height + j] = iter;
 	}
+    }
+
     }
 }

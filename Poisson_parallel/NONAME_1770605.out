@@ -1,0 +1,45 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-21-105>
+Subject: Job 1770605: <NONAME> in cluster <dcc> Done
+
+Job <NONAME> was submitted from host <n-62-31-2> by user <s182169> in cluster <dcc> at Thu Jan 17 09:49:37 2019
+Job was executed on host(s) <n-62-21-105>, in queue <hpc>, as user <s182169> in cluster <dcc> at Thu Jan 17 09:49:39 2019
+</zhome/80/a/134683> was used as the home directory.
+</zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel> was used as the working directory.
+Started at Thu Jan 17 09:49:39 2019
+Terminated at Thu Jan 17 09:49:40 2019
+Results reported at Thu Jan 17 09:49:40 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+for t in 1 2 4 6 8 10 12 14 16
+do
+	for size in 1000
+	do
+		OMP_NUM_THREADS=$t 
+		echo $t $size $(./poisson_naive.suncc $size)  >> res.dat
+	done
+done
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.37 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     1024.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   15 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) is above this job summary.
+

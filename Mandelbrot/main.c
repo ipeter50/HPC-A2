@@ -31,10 +31,9 @@ main(int argc, char *argv[]) {
 
     ts = omp_get_wtime();	
 
-    #pragma omp parallel
-    {
+    
     mandel(width, height, image, max_iter);
-    }
+    
 
     te = omp_get_wtime() - ts;
     printf("%f\n", te);
