@@ -1,5 +1,5 @@
 #!/bin/bash
-#BSUB -o sockets.out
+#BSUB -o sockets_spread.out
 #BSUB -q hpcintro
 #BSUB -n 24
 
@@ -8,7 +8,7 @@ do
 	
 	export OMP_NUM_THREADS=$t
 	export OMP_SCHEDULE=static
-	export OMP_PROC_BIND=true 
+	export OMP_PROC_BIND=spread 
 	export OMP_PLACES=sockets 
 	./poisson.suncc 2500 500
 	

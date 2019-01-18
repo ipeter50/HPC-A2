@@ -3,7 +3,7 @@ OBJS	= $(SRCS:.c=.o)
 TARGET	= poisson_naive.$(CC)
 
 CC	= suncc
-INCS	= 
+INCS	= -xinstrument=datarace
 DBG	= -g
 OPT	= -fast -O3
 PARA	= -xopenmp -xloopinfo

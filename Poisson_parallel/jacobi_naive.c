@@ -1,4 +1,4 @@
-#include "jacobi.h"
+#include "jacobi_naive.h"
 #include "utils.h"
 
 void
@@ -14,7 +14,7 @@ jacobi(double **Uk, double **Uk1, double **F, int N, int max_iter, double thresh
 	double h = 1.0/4;
 
 
-	d = 1000; 
+	d = 1000.0; 
 	while(k<max_iter && d>threshold){
 		d = update_jacobi(Uk, Uk1, F, N, delta_squared, h);
 				
