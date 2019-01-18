@@ -1,0 +1,110 @@
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 32.914886
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 17.208735
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 8.770382
+jacobi
+Norm: 13.328629 
+k: 500OpenMP Gauss-Seidel: Compared to the Jacobi method, the GaussSeidel
+method cannot be parallelized in the same ?simple? way as the
+Jacobi method. Explain why!
+However, there exist ways to parallelize the Gauss-Seidel method. Do a
+literature search and find methods how one can parallelize the GS method
+for multi-core systems. Please provide the references (URLs or Journal
+reference), and give a short summary in your own words how the me
+Time: 6.012298
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 4.641721
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 3.765134
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 3.319973
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 3.282677
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 3.186561
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 2.885840
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 2.566050
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 2.425691
+jacobi
+Norm: 13.328629 
+k: 500
+Time: 2.335899
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-31-17>
+Subject: Job 1784955: <NONAME> in cluster <dcc> Done
+
+Job <NONAME> was submitted from host <n-62-31-1> by user <s182169> in cluster <dcc> at Fri Jan 18 10:34:47 2019
+Job was executed on host(s) <24*n-62-31-17>, in queue <hpcintro>, as user <s182169> in cluster <dcc> at Fri Jan 18 10:37:29 2019
+</zhome/80/a/134683> was used as the home directory.
+</zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel> was used as the working directory.
+Started at Fri Jan 18 10:37:29 2019
+Terminated at Fri Jan 18 10:39:03 2019
+Results reported at Fri Jan 18 10:39:03 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -o ft_non_naive_2500.out
+#BSUB -q hpcintro
+#BSUB -n 24
+
+for t in  1 2 4 6 8 10 12 14 16 18 20 22 24;
+do
+	
+	export OMP_NUM_THREADS=$t
+	export OMP_SCHEDULE=static
+	export OMP_PROC_BIND=true 
+	export OMP_PLACES=cores 
+	./poisson.suncc 2500 500
+	
+done
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   527.15 sec.
+    Max Memory :                                 146 MB
+    Average Memory :                             145.50 MB
+    Total Requested Memory :                     24576.00 MB
+    Delta Memory :                               24430.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                28
+    Run time :                                   96 sec.
+    Turnaround time :                            256 sec.
+
+The output (if any) is above this job summary.
+

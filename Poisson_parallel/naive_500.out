@@ -1,0 +1,100 @@
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 10.539550
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 6.985093
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 3.924770
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 3.893301
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.760937
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.390022
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.659429
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.376608
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.542868
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.633516
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.849357
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.762734
+jacobi
+Norm: 0.031908 
+k: 10000
+Time: 2.896302
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@n-62-31-19>
+Subject: Job 1785512: <NONAME> in cluster <dcc> Done
+
+Job <NONAME> was submitted from host <n-62-31-1> by user <s182169> in cluster <dcc> at Fri Jan 18 11:32:43 2019
+Job was executed on host(s) <24*n-62-31-19>, in queue <hpcintro>, as user <s182169> in cluster <dcc> at Fri Jan 18 11:38:06 2019
+</zhome/80/a/134683> was used as the home directory.
+</zhome/80/a/134683/Documents/HPC/Week_2/Assignment_2/Poisson_parallel> was used as the working directory.
+Started at Fri Jan 18 11:38:06 2019
+Terminated at Fri Jan 18 11:38:56 2019
+Results reported at Fri Jan 18 11:38:56 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash 
+#BSUB -q hpcintro
+#BSUB -o naive_500.out
+#BSUB -n 24
+
+for t in 1 2 4 6 8 10 12 14 16 18 20 22 24;
+do
+	
+	OMP_NUM_THREADS=$t ./poisson_naive.suncc 500 10000
+	
+done
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   284.61 sec.
+    Max Memory :                                 8 MB
+    Average Memory :                             8.00 MB
+    Total Requested Memory :                     24576.00 MB
+    Delta Memory :                               24568.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                16
+    Run time :                                   51 sec.
+    Turnaround time :                            373 sec.
+
+The output (if any) is above this job summary.
+

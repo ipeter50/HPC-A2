@@ -26,7 +26,6 @@ update_gs(double **Uk, double **F, int N, double delta_squared, double h){
 
 	double tmp, tmp1;
 	double norm=0.0;
-
 	for(j=1;j<N+1;j++){
 		for(i=1;i<N+1;i++){
 			tmp = h*(Uk[i+1][j] + Uk[i-1][j] + Uk[i][j+1] + Uk[i][j-1] +  delta_squared * F[i][j]);

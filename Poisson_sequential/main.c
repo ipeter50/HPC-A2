@@ -17,8 +17,8 @@ main(int argc, char *argv[]) {
 	
 	int N = 10;
 	
-	double threshold = 0.0;
-	int max_iter = 10000;
+	double threshold = 0.001;
+	int max_iter = 100000;
 
 	int i, j;
 	

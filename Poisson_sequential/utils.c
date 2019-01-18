@@ -6,9 +6,9 @@ init_matrices(double **Uk, double **Uk1, double **F, int N){
 	int i, j;
 	for(i=0;i<N+2;i++){
 		for(j=0;j<N+2;j++){
-			Uk[i][j] = 20;
-			Uk1[i][j] = 20;
-			F[i][j] = 20;
+			Uk[i][j] = 0;
+			Uk1[i][j] = 0;
+			F[i][j] = 0;
 		}
 	}
 
